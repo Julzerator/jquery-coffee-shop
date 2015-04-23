@@ -60,9 +60,9 @@
         var myRevenue = revenue();
         $('#revenue').html("Today's revenues: $" + myRevenue.toFixed(2));
 
-        $('#coffee_image').attr('src', "static/coffee_machine.jpg");
-        setTimeout(function () { $('#coffee_image').attr('src', "static/coffee_mug.jpg"); }, 500);
-        setTimeout(function () { $('#coffee_image').attr('src', "static/coffee_beans.jpg"); }, 1500);
+        $('#coffee_image').fadeOut(800, function () { $('#coffee_image').attr('src', "static/coffee_machine.jpg").fadeIn(800); });
+        setTimeout(function () { $('#coffee_image').fadeOut(800, function () { $('#coffee_image').attr('src', "static/coffee_mug.jpg").fadeIn(800); }) }, 2100);
+        setTimeout(function () { $('#coffee_image').fadeOut(800, function () { $('#coffee_image').attr('src', "static/coffee_beans.jpg").fadeIn(800); }) }, 4200);
     }
 
 
